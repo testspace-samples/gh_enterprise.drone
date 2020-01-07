@@ -1,0 +1,18 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+    - name: testspace
+      image: buildpack-deps:18.04-scm
+      commands:
+        - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C /usr/local/bin
+        - ./create_testspace_space.sh open.stridespace.com
+        - testspace config url open.stridespace.com
+        - testspace results.xml ?finish
+      environment:
+        TESTSPACE_TOKEN:
+          from_secret: testspace_token
+      when:
+        status: [ failure, success ]
+     
