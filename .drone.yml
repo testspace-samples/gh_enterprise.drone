@@ -8,7 +8,7 @@ steps:
       commands:
         - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C /usr/local/bin
         - testspace config url samples.testspace.com
-        - testspace results.xml ?finish
+        - testspace results.xml
       environment:
         TESTSPACE_TOKEN:
           from_secret: testspace_token
