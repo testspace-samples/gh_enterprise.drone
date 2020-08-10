@@ -8,4 +8,4 @@ Steps to add Testspace to a GitHub enterprise repo using Drone as the CI
 * Add testspace_token to Drone Secrets for a user that has access to Testspace project
 * Note that for GitHub enterprise a deleted branch requires that the corresponding space be *manually* deleted via the Testspace UI.
 
-For additional documentation on adding Testspace to a CI see [Testspace Help](https://help.testspace.com/docs/publish/push-data-add-to-ci#drone).
+For additional documentation on adding Testspace to a CI see [Testspace Help](https://help.testspace.com/docs/publish/push-data-add-to-ci).
